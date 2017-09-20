@@ -1,19 +1,22 @@
-<ol>
-    <li *ngFor="let el of searchService.results">
-        <div>
-            Publication Date - {{ el.pub_date }}
-        </div>
-        <div>
-            Document type - {{el.document_type}}
-        </div>
-        <div>
-            Headline - 
-                <a  
-                    target="_blank"
-                    href="{{el.web_url}}"
-                >
-                    {{el.headline.print_headline || el.headline.main}} 
-                </a>
-        </div>
-    </li>
-</ol>
+<div class="mainContainer">
+    <h1> results </h1>
+    <ol>
+        <li *ngFor="let el of searchService.results">
+            <div>
+                Publication Date - {{ el.pub_date | date}}
+            </div>
+            <div>
+                Document type - {{el.document_type}}
+            </div>
+            <div>
+                Headline - 
+                    <a  
+                        target="_blank"
+                        href="{{el.web_url}}"
+                    >
+                        {{el.headline.print_headline || el.headline.main}} 
+                    </a>
+            </div>
+        </li>
+    </ol>
+</div>

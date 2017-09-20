@@ -1,0 +1,6 @@
+.mainContainer {
+    margin: 30px;
+    padding: 20px;
+    border: solid 4px #ccc;
+    display: inline-block;
+}
